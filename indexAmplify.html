@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<style>
+button{
+border-radius: 10px;
+}
+input{
+border-radius: 10px;
+}
+</style>
+<body>
+<h1>Form Validation</h1>
+<p>Give me a Positive Integer</p>
+<input id="edu">
+<button type="button" onclick="myFunction()">Submit</button>
+<p id="eduform"></p>
+<script>
+function myFunction() {
+var x, text;
+//Getting the value of the input field with id="edu"
+x = document.getElementById("edu").value;
+// If x is less than 0, input is invalid
+//otherwise input is valid
+if (isNaN(x) || x < 0) {
+text = "Input invalid";
+} else {
+text = "A valid Input";
+}
+document.getElementById("eduform").innerHTML = text;
+}
+</script>
+</body>
+</html>
